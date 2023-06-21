@@ -38,6 +38,7 @@
     <!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="styles/style.css"/>
     <link rel="stylesheet" type="text/css" href="demo/style-demo.css"/>
+
 	
 </head>
 <body class="bg-triangles">
@@ -122,9 +123,24 @@
 						
 					    <!-- About -->
 						<div class="pb-3">
-		                    <h1 class="title title--h1 first-title title__separate" >Extracto</h1>
-							<p>Ingeniero egresado de la Universidad nacional de Rosario. sdgsdg sdgsdgs resolución de problemas nsdg osfg. sfgjdfsfhs.  sdhshvb</p>
+					        <div style="margin: 0;padding: 0;display: flex;flex-direction: row;justify-content: space-between;"><h1 class="title title--h1 first-title title__separate" >Extracto</h1>
+								<label class="switch">
+									<input type="checkbox" onclick="changelang()">
+									<span class="slider round"></span>
+								  </label>
+							  
+							</div>
+							<p class="bilanguage" data-es='Nací en Goya (Corrientes). Soy Ing. Civil graduado de la Universidad Nacional de Rosario. 
+								Entusiasta de la programación y la aplicación de la tecnología en el campo de la ingeniería civil. 
+								Poseo un amplio conocimiento en herramientas especializadas, capacidad de análisis e inventiva, lo que me permite desarrollar soluciones innovadoras y eficientes para los desafíos de la industria.'
+								data-en='Civil Engineer graduated from the National University of Rosario. 
+								Programming expert and passionate about the application of technology in the field of civil engineering. 
+								I have extensive knowledge in programming languages ​​and specialized tools, which allows me to develop innovative and efficient solutions to industry challenges.'
+								></p>
+								<p class="bilanguage" data-es='Durante mi formación, adquirí una sólida base en los principios de la ingeniería civil, enfocándome en áreas como el diseño estructural, la planificación y gestión de proyectos, y la utilización de software de modelado y análisis. Mi habilidad para sistematizar me ha permitido automatizar tareas, optimizar procesos y mejorar la precisión en la toma de decisiones.'
+								data-en='Throughout my academic journey, I acquired a comprehensive understanding of civil engineering principles, with a particular focus on areas such as structural design, project planning and management, and the utilization of modeling and analysis software. Leveraging my programming prowess, I have successfully automated tasks, streamlined processes, and enhanced decision-making precision, all of which have had a positive impact.'></p>
 					    </div>
+						
 					</div class="box shadow pb-0">	
 					<div class="box shadow pb-0">
 						<!-- Experience -->
@@ -138,32 +154,47 @@
 									<div class="timeline">
 									    <!-- Item -->
 									    <article class="timeline__item">
-									        <h5 class="title title--h5 timeline__title">EDILIZIA - Área Costos</h5>
+												<h5 class="title title--h5 timeline__title">EDILIZIA - Ingeniería de Costos</h5>
 										    <span class="timeline__period">Marzo 2019 — Actualidad</span>
-										    <p class="timeline__description">Ingeniería de costos.</p>
-											<p class="timeline__description">Cómputos, presupuestos y órdenes de inversión.</p>
-											<p class="timeline__description">Mejora continua del área</p>
-											<p class="timeline__description">Predimensionador</p>
-											<p class="timeline__description">Control de gestión</p>
+
 										</article>
                                         
 										<!-- Item -->
 									    <article class="timeline__item">
-									        <h5 class="title title--h5 timeline__title">Cómputos, presupuestos y órdenes de inversión.</h5>
-										    <span class="timeline__period">2013 — 2015</span>
-										    <p class="timeline__description">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
+									        <h5 class="title title--h5 timeline__title">Cómputos, presupuestos y órdenes de inversión</h5>
+										    <!-- <span class="timeline__period">2013 — 2015</span>-->
+										    <p class="timeline__description">Análisis de legajos. Pedido de cotizaciones. Estimación de anteproyectos. 
+												Manejo de software Presto. Actualización de base de datos de precios.</p>
 										</article>
                                         
+										<!-- Item -->
+									    <article class="timeline__item">
+									        <h5 class="title title--h5 timeline__title">Predimensionador de presupuestos</h5>
+										    <!-- <span class="timeline__period">2010 — 2013</span>-->
+										    <p class="timeline__description">Confección de un Predimensionador en software Presto. 
+												Consiste en un programa en el cual ingresando algunos parámetros básicos de un edificio de viviendas (superficies, terminaciones, calidades)
+											se genera un presupuesto completo con precios de la base de datos. <a href="www.google.com>">Ver demo ↗</a></p>
+										</article>
+										
+										<!-- Item -->
+									    <article class="timeline__item">
+									        <h5 class="title title--h5 timeline__title">Analista de control de gestión</h5>
+										    <!-- <span class="timeline__period">2010 — 2013</span>-->
+										    <p class="timeline__description">Revisión mensual de los márgenes brutos de las obras activas. 
+												Seguimiento de ingresos, egresos, estado de acopios, cajas y cuentas patrimoniales. 
+												Evolución histórica y proyección a futuro.</p>
+										</article>
+
 										<!-- Item -->
 									    <article class="timeline__item">
 									        <h5 class="title title--h5 timeline__title">Mejora continua del área</h5>
-										    <span class="timeline__period">2010 — 2013</span>
-										    <p class="timeline__description">Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et quas molestias exceptur.</p>
+										    <!-- <span class="timeline__period">2010 — 2013</span>-->
+										    <p class="timeline__description">Elaboración de planillas de control de costo, plantillas de informes de Presto, reportes de presupuestos para otras áreas.</p>
 										</article>
 									</div>
 								</div>
 							    <div class="col-12 col-lg-6">
-								    <h2 class="title title--h3"><img class="title-icon" src="icons/icon-education.svg" alt="" /> Educación</h2>
+								    <h2 class="title title--h3"><img class="title-icon" src="icons/icon-education.svg" alt="" /> Formación</h2>
 									<div class="timeline">
 									    <!-- Item -->
 									    <article class="timeline__item">
@@ -178,7 +209,6 @@
 										    <span class="timeline__period">2000 — 2013</span>
 										    <p class="timeline__description">Educación inicial, primaria y secundaria.</p>
 											<p class="timeline__description">Mejor promedio de la promoción 2013.</p>
-											<p class="timeline__description">He participado en distintas competencias: olimpíadas de matemáticas, llegando al nivel nacional desde 2006 a 2013 y obtenido varias menciones a nivel nacional e internacional. También tuve participación en los juegos nacionales Evita en la disciplina de natación</p>
 										</article>
                                         
 										<!-- Item -->
@@ -190,9 +220,31 @@
 									</div>	
 								</div>
 								
-							    
+								<div class="col-12 col-lg-6">
+								    <h2 class="title title--h3"><img class="title-icon" src="icons/icon-education.svg" alt="" /> Cursos</h2>
+									
+										<ul class="timeline">
+											<li class="arrow"><h5 class="title title--h5 timeline__title">Sustentabilidad en ingeniería civil</h5></li>
+											<p class="timeline__list">2017. UNR. Nota: 9. </p>
+											<li class="arrow"><h5 class="title title--h5 timeline__title">Estructuras sismorresistentes</h5></li>
+											<p class="timeline__list">2018. UNR. Nota: 10. </p>
+											<li class="arrow"><h5 class="title title--h5 timeline__title">Puentes</h5></li>
+											<p class="timeline__list">2018. UNR. Nota: 10. </p>
+											<li class="arrow"><h5 class="title title--h5 timeline__title">Hidrolgía e hidráulica en territorios urbanizados</h5></li>
+											<p class="timeline__list">2018. UNR. Nota: 10. </p>
+											<li class="arrow"><h5 class="title title--h5 timeline__title">Introducción al desarrollo front-end</h5></li>
+											<p class="timeline__list">2022. TICMas Academy. <a href="www.google.com">Certificado ↗</a> </p>
+											<li class="arrow"><h5 class="title title--h5 timeline__title">BIM Design</h5></li>
+											<p class="timeline__list">2020. Edilizia. <a href="www.google.com">Certificado ↗</a> </p>
+
+										  </ul>  
+								</div>
+
+
+
 							</div>
 						</div>
+
 						
 						<!-- Skills -->
 						<div class="box-inner box-inner--rounded">
@@ -272,6 +324,7 @@
                                 </div>
 							</div>
 						</div>
+						
 					</div>
 					
 					<!-- Footer -->
@@ -316,5 +369,17 @@
     <script src="js/common.js"></script>
     
 	<script src="demo/plugins-demo.js"></script>
+
+	<script>
+	
+        function changelang(){
+			var currentlanguage = getComputedStyle(document.body).getPropertyValue("--language")
+			if (currentlanguage == 'data-en'){
+				document.documentElement.style.setProperty('--language', 'data-es')
+			} else {
+				document.documentElement.style.setProperty('--language', 'data-en')
+			}
+		}
+	</script>
 </body>
 </html>
