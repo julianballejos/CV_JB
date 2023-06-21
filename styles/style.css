@@ -104,7 +104,7 @@ html.is-scroll-disabled body {
 }
 
 .bg-triangles {
-  background-image: url(../images/triangles-top.png), url(../images/triangles-bottom.png);
+  background-image: url(../images/triangles-bottom.png), url(../images/triangles-bottom.png);
   background-position: left top, right bottom;
   background-repeat: no-repeat;
   background-size: inherit;
@@ -115,7 +115,7 @@ html.is-scroll-disabled body {
   }
 }
 .bg-triangles-2 {
-  background-image: url(../images/triangle-2-top.png), url(../images/triangle-2-bottom.png);
+  background-image: url(../images/triangles-bottom.png), url(../images/triangles-bottom.png);
   background-position: right top, left bottom;
   background-repeat: no-repeat;
   background-size: 50%;
@@ -2635,9 +2635,18 @@ button:focus {
 .timeline__description {
   margin-top: 0.5rem;
 }
+.timeline__list {
+  margin-top: 0.15rem;
+  padding-left: 20px;
+}
+
 @media only screen and (max-width: 580px) {
   .timeline__description {
     margin-top: 0.1875rem;
+  }
+  .timeline__list {
+    margin-top: 0.1rem;
+    padding-left: 20px;
   }
 }
 
@@ -2645,8 +2654,8 @@ button:focus {
     - Other
 ----------------------------------------------------------------- */
 .back-to-top {
-  border-top: 0.0625rem solid #44566C;
-  border-left: 0.0625rem solid #44566C;
+  border-top: 0.1rem solid #44566C;
+  border-left: 0.1rem solid #44566C;
   cursor: pointer;
   height: 2rem;
   opacity: .5;
@@ -2699,3 +2708,103 @@ button:focus {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+/* -----------------------------------------------------------------
+    - Listas
+----------------------------------------------------------------- */
+li {
+  list-style: none;
+  position: relative;
+  padding: 0 0 0 20px;
+}
+
+            
+li.arrow::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  height: 7px;
+  width: 7px;
+  border: 1px solid #304CFD;
+  border-width: 2px 2px 0 0;
+  transform: rotate(45deg);
+}
+
+/* -----------------------------------------------------------------
+    - Botón switch
+----------------------------------------------------------------- */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 3em;
+  height: 2em;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  height: 1.7em;
+  width: 3em;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 1.5em;
+  width: 1.5em;
+  left: 0.1em;
+  bottom: 0.12em;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/197/197374.png");
+  background-color: white;
+  background-size: contain;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #304CFD;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #304CFD;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(1.3em);
+  -ms-transform: translateX(1.3em);
+  transform: translateX(1.3em);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 7em
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* -----------------------------------------------------------------
+    - Cambio idioma
+----------------------------------------------------------------- */
+
+:root {
+  --language:data-es;
+  }
+  .bilanguage::after {
+    content: attr(var(--language));
+  }
