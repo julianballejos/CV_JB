@@ -126,7 +126,7 @@
 					        <div style="margin: 0;padding: 0;display: flex;flex-direction: row;justify-content: space-between;"><h1 class="title title--h1 first-title title__separate" >Extracto</h1>
 								<label class="switch">
 									<input type="checkbox" onclick="changelang()">
-									<span class="slider round"></span>
+									<span id="mundi" class="slider round" style="opacity: 0.6;"></span>
 								  </label>
 							  
 							</div>
@@ -215,14 +215,44 @@
 									    <article class="timeline__item">
 									        <h5 class="title title--h5 timeline__title">Saint Paul Institute</h5>
 										    <span class="timeline__period">2002 — 2012</span>
-										    <p class="timeline__description">Capacitación en lengua inglesa. Mejor promedio de la promoción 2012. </p>
+										    <p class="timeline__description">Capacitación en lengua inglesa. </p>
+											<p class="timeline__description">	Mejor promedio de la promoción 2012. </p>
 										</article>
 									</div>	
+
+									<h2 class="title title--h3" style="display: flex; margin-bottom: auto;"><div class="icon-container"><img class="title-icon" style="margin-left: 1rem;" src="icons/skills.svg" alt="" /></div> Habilidades</h2>
+
+								<div class="badge-container" style="display: flex;">
+									<div class="badge badge--dark">Solución de problemas</div>
+									<div class="badge badge--dark">Flexibilidad </div>
+									<div class="badge badge--dark">Capacidad de aprendizaje</div>
+									<div class="badge badge--dark">Razonamiento analítico</div>
+									<div class="badge badge--blue">Office</div>
+									<div class="badge badge--blue">Google Workspace</div>
+									<div class="badge badge--blue">Presto</div>									
+									<div class="badge badge--blue">Staad Pro</div>
+									<div class="badge badge--blue">CSS</div>
+									<div class="badge badge--blue">HTML</div>
+									<div class="badge badge--blue">Javascript</div>
+									<div class="badge badge--blue">Google Apps Script</div>
+									<div class="badge badge--blue">Python</div>
+
+								</div>
 								</div>
 								
-								<div class="col-12 col-lg-6">
-								    <h2 class="title title--h3"><img class="title-icon" src="icons/icon-education.svg" alt="" /> Cursos</h2>
-									
+
+
+
+
+							</div>
+						</div>
+
+						
+						<!-- Skills -->
+						<div class="box-inner box-inner--rounded">
+						    <div class="row">
+								<div class="col-12 col-lg-6" style="margin-bottom: 2rem;">
+								    <h2 class="title title--h3" style="display: flex;"><div class="icon-container"><img class="title-icon title-icon2" src="icons/diploma.png" alt="" /></div> Cursos</h2>									
 										<ul class="timeline">
 											<li class="arrow"><h5 class="title title--h5 timeline__title">Sustentabilidad en ingeniería civil</h5></li>
 											<p class="timeline__list">2017. UNR. Nota: 9. </p>
@@ -237,22 +267,33 @@
 											<li class="arrow"><h5 class="title title--h5 timeline__title">BIM Design</h5></li>
 											<p class="timeline__list">2020. Edilizia. <a href="www.google.com">Certificado ↗</a> </p>
 
-										  </ul>  
+										</ul>  
+								</div>
+								<div class="col-12 col-lg-6">
+								    <h2 class="title title--h3" style="display: flex;margin-bottom: 0.5rem;"><img class="title-icon" src="icons/idiomas.svg" alt="" /> Idiomas</h2>									
+										<ul class="timeline">
+											<li class="arrow"><h5 class="title title--h5 timeline__title">Inglés</h5></li>
+											<p class="timeline__list">First Certificate in English, Cambridge University. Grade: B </p>
+											<p class="timeline__list">English for bussiness. Curso dictado por la academia StepUp. 80 hs. </p>
+										</ul>  
+
+										<h2 class="title title--h3" style="display: flex;padding-top: 1rem;margin-bottom: 0.5rem;"><img class="title-icon" src="icons/voluntariado.svg" alt="" /> Voluntariado</h2>									
+										<ul class="timeline">
+											<li class="arrow"><h5 class="title title--h5 timeline__title">Fundación SÍ</h5></li>
+											<p class="timeline__list">Goya, 2012.</p>
+											<li class="arrow"><h5 class="title title--h5 timeline__title">Cáritas</h5></li>
+											<p class="timeline__list">Goya, 2012-2013.</p>
+											<li class="arrow"><h5 class="title title--h5 timeline__title">Jabes Casa de Restauración</h5></li>
+											<p class="timeline__list">Rosario, 2016-2018.</p>
+										</ul>  
 								</div>
 
+								
 
-
-							</div>
-						</div>
-
-						
-						<!-- Skills -->
-						<div class="box-inner box-inner--rounded">
-						    <div class="row">
-							    <div class="col-12 col-lg-6">
+							   <!--  <div class="col-12 col-lg-6">
 						            <h2 class="title title--h3">Design Skills</h2>
 									<div class="box box__second">
-									    <!-- Progress -->
+									    
 									    <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
 											    <div class="progress-text"><span>Web Design</span><span>80%</span></div>
@@ -260,7 +301,7 @@
 											<div class="progress-text"><span>Web Design</span></div>
                                         </div>
 										
-									    <!-- Progress -->
+									    
 									    <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
 											    <div class="progress-text"><span>Graphic Design</span><span>75%</span></div>
@@ -268,7 +309,7 @@
 											<div class="progress-text"><span>Graphic Design</span></div>
                                         </div>
 										
-									    <!-- Progress -->
+									    
 									    <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
 											    <div class="progress-text"><span>Photoshop</span><span>90%</span></div>
@@ -276,7 +317,7 @@
 											<div class="progress-text"><span>Photoshop</span></div>
                                         </div>
 										
-									    <!-- Progress -->
+									    
 									    <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
 											    <div class="progress-text"><span>Illustrator</span><span>50%</span></div>
@@ -284,12 +325,12 @@
 											<div class="progress-text"><span>Illustrator</span></div>
                                         </div>
 									</div>
-                                </div>
+                                </div> -->
 								
-							    <div class="col-12 col-lg-6 mt-4 mt-lg-0">
+							    <!-- <div class="col-12 col-lg-6 mt-4 mt-lg-0">
 						            <h2 class="title title--h3">Coding Skills</h2>
 									<div class="box box__second">
-									    <!-- Progress -->
+									    
 									    <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
 											    <div class="progress-text"><span>WordPress</span><span>70%</span></div>
@@ -297,7 +338,7 @@
 											<div class="progress-text"><span>WordPress</span></div>
                                         </div>
 										
-									    <!-- Progress -->
+									    
 									    <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
 											    <div class="progress-text"><span>Javascript</span><span>70%</span></div>
@@ -305,7 +346,7 @@
 											<div class="progress-text"><span>Javascript</span></div>
                                         </div>
 										
-									    <!-- Progress -->
+									    
 									    <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100">
 											    <div class="progress-text"><span>HTML</span><span>100%</span></div>
@@ -313,7 +354,7 @@
 											<div class="progress-text"><span>HTML</span></div>
                                         </div>
 										
-									    <!-- Progress -->
+									    
 									    <div class="progress">
                                             <div class="progress-bar" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
 											    <div class="progress-text"><span>PHP</span><span>30%</span></div>
@@ -321,7 +362,7 @@
 											<div class="progress-text"><span>PHP</span></div>
                                         </div>
 									</div>
-                                </div>
+                                </div> -->
 							</div>
 						</div>
 						
@@ -376,10 +417,19 @@
 			var currentlanguage = getComputedStyle(document.body).getPropertyValue("--language")
 			if (currentlanguage == 'data-en'){
 				document.documentElement.style.setProperty('--language', 'data-es')
+				var icon = document.getElementById("mundi");
+				icon.setAttribute("style","opacity:0.6");
 			} else {
 				document.documentElement.style.setProperty('--language', 'data-en')
+				var icon = document.getElementById("mundi");
+				icon.setAttribute("style","opacity:1");
 			}
 		}
+
+		window.addEventListener('scroll', () => {
+  document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+}, false);
+
 	</script>
 </body>
 </html>
