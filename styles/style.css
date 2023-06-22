@@ -207,11 +207,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: -0.25rem;
   height: 2.5rem;
   width: 2.5rem;
+  pointer-events: none;
 }
 @media only screen and (max-width: 580px) {
   .title-icon {
     height: 2.0833333333rem;
     width: 2.0833333333rem;
+    pointer-events: none;
   }
 }
 .title__separate {
@@ -700,7 +702,7 @@ select option,
 
 @media only screen and (max-width: 580px) {
   .badge {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
   }
 }
 .badge--light {
