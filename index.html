@@ -73,7 +73,7 @@
 						<div class="sidebar__info box-inner box-inner--rounded">
 		                    <ul class="contacts-block">
 					            <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Fecha de nacimiento">
-							        <i class="font-icon icon-calendar"></i>1 de enero 1996 (27 años)
+							        <i class="font-icon icon-calendar"></i>1 de enero 1996</span> (<span id="edad">27</span> años)
 							    </li>
 						        <li class="contacts-block__item" data-toggle="tooltip" data-placement="top" title="Ubicación">
 							        <i class="font-icon icon-location"></i>Rosario, Santa Fe
@@ -409,6 +409,23 @@
 	<script src="demo/plugins-demo.js"></script>
 
 	<script>
+		  function calcularEdad() {
+    const fechaNacimientoStr = document.getElementById("fechaNacimiento").textContent;
+    const fechaNacimiento = new Date(fechaNacimientoStr); // Parsea la fecha de nacimiento
+    const fechaActual = new Date();
+
+    let edad = fechaActual.getFullYear() - fechaNacimiento.getFullYear();
+    const mes = fechaActual.getMonth() - fechaNacimiento.getMonth();
+
+    if (mes < 0 || (mes === 0 && fechaActual.getDate() < fechaNacimiento.getDate())) {
+      edad--;
+    }
+
+    document.getElementById("edad").textContent = edad;
+  }
+
+  // Calcula la edad inicial
+  calcularEdad();
 	
         function changelang(){
 			var currentlanguage = getComputedStyle(document.body).getPropertyValue("--language")
