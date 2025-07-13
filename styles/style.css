@@ -695,6 +695,10 @@ select option,
   font-size: 0.85rem;
 }
 
+.badge:hover {
+  opacity:0.8
+}
+
 @keyframes example {
   from {opacity: 0;}
   to {opacity: 1;}
