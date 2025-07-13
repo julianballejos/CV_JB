@@ -140,23 +140,21 @@
 								</label>
 
 							</div>
-							<p class="bilanguage"
-							data-es='Nací en Goya (Corrientes). Soy Ing. Civil graduado de la Universidad Nacional de Rosario. 
-							Aficionado de la programación y la aplicación de la tecnología en el campo de la ingeniería civil. 
-							Poseo un amplio conocimiento en herramientas especializadas, capacidad de análisis e inventiva, lo que me permite desarrollar soluciones innovadoras y eficientes para los desafíos de la industria.'
-								data-en="I was born in Goya (Corrientes). I'm a Civil Engineer graduated from the National University of Rosario. 
-								I am passionate about applying technology to civil engineering problems. 
-								I have a strong background in specialized tools, analysis and innovation, which enable me to create novel solutions for the industry challenges.">
+							<p class="bilanguage-es">
 								Nací en Goya (Corrientes). Soy Ing. Civil graduado de la Universidad Nacional de Rosario. 
 								Aficionado de la programación y la aplicación de la tecnología en el campo de la ingeniería civil. 
 								Poseo un amplio conocimiento en herramientas especializadas, capacidad de análisis e inventiva, lo que me permite desarrollar soluciones innovadoras y eficientes para los desafíos de la industria.
 							</p>
 							
-							<p class="bilanguage"
-								data-es='Durante mi formación, adquirí una base sólida en los principios de la ingeniería civil, enfocándome en áreas como el diseño estructural, la planificación y gestión de proyectos, y la utilización de software de modelado y análisis. Mi habilidad para sistematizar me ha permitido automatizar tareas, optimizar procesos y mejorar la precisión en la toma de decisiones.'
-								data-en='Throughout my academic journey, I acquired a comprehensive understanding of civil engineering principles, with a particular focus on areas such as structural design, project planning and management, and the use of modeling and analysis software. With my ability to systematize, I have successfully automated tasks, optimized processes, and enhanced decision-making precision.'>
+							<p class="bilanguage-es">
 								Durante mi formación, adquirí una base sólida en los principios de la ingeniería civil, enfocándome en áreas como el diseño estructural, la planificación y gestión de proyectos, y la utilización de software de modelado y análisis. Mi habilidad para sistematizar me ha permitido automatizar tareas, optimizar procesos y mejorar la precisión en la toma de decisiones.
 							</p>
+
+							<p class="bilanguage-en" style="display:none">I was born in Goya (Corrientes). I'm a Civil Engineer graduated from the National University of Rosario. 
+								I am passionate about applying technology to civil engineering problems. 
+								I have a strong background in specialized tools, analysis and innovation, which enable me to create novel solutions for the industry challenges.</p>
+							<p class="bilanguage-en" style="display:none">Throughout my academic journey, I acquired a comprehensive understanding of civil engineering principles, with a particular focus on areas such as structural design, project planning and management, and the use of modeling and analysis software. With my ability to systematize, I have successfully automated tasks, optimized processes, and enhanced decision-making precision.</p>
+						
 						</div>
 
 					</div class="box shadow pb-0">
@@ -543,20 +541,33 @@
 
 	<script>
 
-		function changelang() {
-			const elements = document.querySelectorAll('.bilanguage');
-			const currentLang = document.documentElement.lang || 'es';
+function changelang() {
+    // Determina el idioma actual de la página, por defecto 'es'.
+    const currentLang = document.documentElement.lang || 'es';
 
-			elements.forEach(el => {
-				el.textContent = (currentLang === 'es') ? el.getAttribute('data-en') : el.getAttribute('data-es');
-			});
+    // Selecciona todos los párrafos de cada idioma.
+    const elementsEs = document.querySelectorAll('.bilanguage-es');
+    const elementsEn = document.querySelectorAll('.bilanguage-en');
 
-			document.documentElement.lang = (currentLang === 'es') ? 'en' : 'es';
+    // Lógica para alternar la visibilidad
+    if (currentLang === 'es') {
+        // Si el idioma actual es español, oculta los párrafos en español y muestra los de inglés.
+        elementsEs.forEach(el => el.style.display = 'none');
+        elementsEn.forEach(el => el.style.display = 'block');
+        // Actualiza el estado del idioma de la página a 'en'.
+        document.documentElement.lang = 'en';
+    } else {
+        // Si el idioma actual es inglés, oculta los párrafos en inglés y muestra los de español.
+        elementsEs.forEach(el => el.style.display = 'block');
+        elementsEn.forEach(el => el.style.display = 'none');
+        // Actualiza el estado del idioma de la página a 'es'.
+        document.documentElement.lang = 'es';
+    }
 
-			// Cambiar opacidad del ícono
-			const icon = document.getElementById("mundi");
-			icon.style.opacity = (document.documentElement.lang === 'en') ? '1' : '0.6';
-		}
+    // Cambia la opacidad del ícono según el idioma seleccionado.
+    const icon = document.getElementById("mundi");
+    icon.style.opacity = (document.documentElement.lang === 'en') ? '1' : '0.6';
+}
 
 		window.addEventListener('scroll', () => {
 			document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
